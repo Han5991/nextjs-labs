@@ -1,0 +1,8 @@
+# Dependencies
+node_modules
+
+# Turbo
+.turbo
+
+# Misc
+.DS_Store
