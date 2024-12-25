@@ -46,11 +46,13 @@
         여기서는 path 를 들고와 startServerPath에 넣어준다. 그리고 fork를 통해 startServerPath를 실행한다.
         여기서는 stdio: 'inherit'를 통해 부모 프로세스의 입출력을 자식 프로세스로 전달한다.
         **child_process** -> next js 와 핫리로드를 분리 시킬려고 fork를 사용한다.(추측중)
-        > 실행 하기전 여러가지를 검증 한다.
-        > 1. 디렉토리를 가져와 라우팅을 만드는 부분
-        > 2. 디렉토리가 제대로 있는지 확인 하는 부분
-        > 3. 디펜더시에 sass와 node-sass가 중복으로 설치 되어 있는지(워밍)
-        > 4. @next/font가 설치 되어 있는지(워밍)
+        > #### 실행하기 전 여러가지를 검증한다
+        >
+        > 1. **디렉토리를 가져와 라우팅을 만드는 부분**
+        >    - `getProjectDir` fs를 사용해서 지정해준 루트 경로를 기준으로 프로젝트 경로를 만든다.
+        > 2. **디렉토리가 제대로 있는지 확인하는 부분**
+        > 3. **디펜던시에 `sass`와 `node-sass`가 중복으로 설치되어 있는지** (워닝)
+        > 4. **`@next/font`가 설치되어 있는지** (워닝)
     - **start-server.js**
       ```javascript
         import http from 'http'

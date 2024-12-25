@@ -1,17 +1,19 @@
 {
   "name": "aurora",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "my custom next.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "commander": "12.1.0"
+  "bin": {
+    "aurora": "./src/bin/aurora.ts"
   },
+  "keywords": [],
+  "author": "ant",
+  "license": "ISC",
   "devDependencies": {
-    "@types/node": "20.10.0"
+    "@types/node": "20.10.0",
+    "commander": "12.1.0"
   }
 }
